@@ -1,0 +1,6 @@
+[06-Jan-2015 23:37:38 UTC] PHP Fatal error:  Call to a member function getStatus() on a non-object in /home/pickmeals/public_html/payu/examples/v2/order/OrderCreate.php on line 123
+[08-Jan-2015 00:03:26 UTC] PHP Fatal error:  Call to a member function getStatus() on a non-object in /home/pickmeals/public_html/payu/examples/v2/order/OrderCreate.php on line 123
+[08-Jan-2015 00:20:52 UTC] PHP Fatal error:  Call to a member function getStatus() on a non-object in /home/pickmeals/public_html/payu/examples/v2/order/OrderCreate.php on line 123
+[08-Jan-2015 03:06:10 UTC] PHP Fatal error:  Call to a member function getStatus() on a non-object in /home/pickmeals/public_html/payu/examples/v2/order/OrderCreate.php on line 124
+[08-Jan-2015 03:09:06 UTC] PHP Fatal error:  Call to a member function getStatus() on a non-object in /home/pickmeals/public_html/payu/examples/v2/order/OrderCreate.php on line 124
+[08-Jan-2015 03:09:35 UTC] PHP Fatal error:  Call to a member function getStatus() on a non-object in /home/pickmeals/public_html/payu/examples/v2/order/OrderCreate.php on line 127

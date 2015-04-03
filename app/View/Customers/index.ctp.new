@@ -1,0 +1,33 @@
+<section class="content-header">
+    <h1>
+        Customers List
+        <small>List of all registered customers </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active"><a href="/customers">Customers</a></li>
+    </ol>
+</section>
+<div class="box box-solid">
+    <div class="box-header">
+
+    </div>
+    <div class="box-body">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <th><?php echo $this->Paginator->sort('id'); ?></th>
+            <th><?php echo $this->Paginator->sort('deviceId'); ?></th>
+            <th><?php echo $this->Paginator->sort('name'); ?></th>
+            <th><?php echo $this->Paginator->sort('photo'); ?></th>
+            <th><?php echo $this->Paginator->sort('email'); ?></th>
+            <th><?php echo $this->Paginator->sort('mobile_number'); ?></th>
+
+            <th><?php echo $this->Paginator->sort('pin_code'); ?></th>
+            <th><?php echo $this->Paginator->sort('address'); ?></th>
+            <th><?php echo $this->Paginator->sort('city'); ?></th>
+            <th><?php echo $this->Paginator->sort('state'); ?></th>
+            <th><?php echo $this->Paginator->sort('country'); ?></th>
+            <th><?php echo $this->Paginator->sort('status'); ?></th>
+            <th class="actions"><?php echo __('Actions'); ?></th>
+            </thead>
+            <tbody>
