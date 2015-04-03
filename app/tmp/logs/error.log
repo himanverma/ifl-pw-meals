@@ -1,0 +1,148 @@
+2015-04-03 05:41:59 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /live/fonts/circular.css
+Stack Trace:
+#0 /home/pickmeals/public_html/live/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-03 05:41:59 Error: Fatal Error (256): [MissingLayoutException] Layout file "Layouts/css/error.ctp" is missing.
+#0 /home/pickmeals/public_html/live/lib/Cake/View/View.php(514): View->_getLayoutFileName('error')
+#1 /home/pickmeals/public_html/live/lib/Cake/View/View.php(481): View->renderLayout('', 'error')
+#2 /home/pickmeals/public_html/live/lib/Cake/Controller/Controller.php(960): View->render('/Errors/error40...', NULL)
+#3 /home/pickmeals/public_html/live/app/Lib/Error/AppExceptionRenderer.php(25): Controller->render('/Errors/error40...')
+#4 /home/pickmeals/public_html/live/app/Lib/Error/AppExceptionRenderer.php(81): AppExceptionRenderer->notFound(Object(MissingControllerException))
+#5 [internal function]: AppExceptionRenderer->missingController(Object(MissingControllerException))
+#6 /home/pickmeals/public_html/live/lib/Cake/Error/ExceptionRenderer.php(187): call_user_func_array(Array, Array)
+#7 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(127): ExceptionRenderer->render()
+#8 [internal function]: ErrorHandler::handleException(Object(MissingControllerException))
+#9 {main} in [/home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php, line 138]
+2015-04-03 05:41:59 Error: Fatal Error (1): Uncaught exception 'InternalErrorException' with message 'Internal Server Error' in /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php:266
+Stack trace:
+#0 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(256, '[MissingLayoutE...', '/home/pickmeals...', 138)
+#1 [internal function]: ErrorHandler::handleError(256, '[MissingLayoutE...', '/home/pickmeals...', 138, Array)
+#2 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(138): trigger_error('[MissingLayoutE...', 256)
+#3 [internal function]: ErrorHandler::handleException(Object(MissingControllerException))
+#4 {main}
+  thrown in [/home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php, line 266]
+2015-04-03 05:41:59 Error: [InternalErrorException] Internal Server Error
+Request URL: /live/fonts/circular.css
+Stack Trace:
+#0 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Uncaught except...', '/home/pickmeals...', 266)
+#1 [internal function]: ErrorHandler::handleError(1, 'Uncaught except...', '/home/pickmeals...', 266, Array)
+#2 /home/pickmeals/public_html/live/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Uncaught except...', '/home/pickmeals...', 266, Array)
+#3 /home/pickmeals/public_html/live/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-03 05:42:10 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /live/fonts/circular.css
+Stack Trace:
+#0 /home/pickmeals/public_html/live/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-03 05:42:10 Error: Fatal Error (256): [MissingLayoutException] Layout file "Layouts/css/error.ctp" is missing.
+#0 /home/pickmeals/public_html/live/lib/Cake/View/View.php(514): View->_getLayoutFileName('error')
+#1 /home/pickmeals/public_html/live/lib/Cake/View/View.php(481): View->renderLayout('', 'error')
+#2 /home/pickmeals/public_html/live/lib/Cake/Controller/Controller.php(960): View->render('/Errors/error40...', NULL)
+#3 /home/pickmeals/public_html/live/app/Lib/Error/AppExceptionRenderer.php(25): Controller->render('/Errors/error40...')
+#4 /home/pickmeals/public_html/live/app/Lib/Error/AppExceptionRenderer.php(81): AppExceptionRenderer->notFound(Object(MissingControllerException))
+#5 [internal function]: AppExceptionRenderer->missingController(Object(MissingControllerException))
+#6 /home/pickmeals/public_html/live/lib/Cake/Error/ExceptionRenderer.php(187): call_user_func_array(Array, Array)
+#7 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(127): ExceptionRenderer->render()
+#8 [internal function]: ErrorHandler::handleException(Object(MissingControllerException))
+#9 {main} in [/home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php, line 138]
+2015-04-03 05:42:10 Error: Fatal Error (1): Uncaught exception 'InternalErrorException' with message 'Internal Server Error' in /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php:266
+Stack trace:
+#0 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(256, '[MissingLayoutE...', '/home/pickmeals...', 138)
+#1 [internal function]: ErrorHandler::handleError(256, '[MissingLayoutE...', '/home/pickmeals...', 138, Array)
+#2 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(138): trigger_error('[MissingLayoutE...', 256)
+#3 [internal function]: ErrorHandler::handleException(Object(MissingControllerException))
+#4 {main}
+  thrown in [/home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php, line 266]
+2015-04-03 05:42:10 Error: [InternalErrorException] Internal Server Error
+Request URL: /live/fonts/circular.css
+Stack Trace:
+#0 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Uncaught except...', '/home/pickmeals...', 266)
+#1 [internal function]: ErrorHandler::handleError(1, 'Uncaught except...', '/home/pickmeals...', 266, Array)
+#2 /home/pickmeals/public_html/live/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Uncaught except...', '/home/pickmeals...', 266, Array)
+#3 /home/pickmeals/public_html/live/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-03 06:05:00 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /live/fonts/circular.css
+Stack Trace:
+#0 /home/pickmeals/public_html/live/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-03 06:05:00 Error: Fatal Error (256): [MissingLayoutException] Layout file "Layouts/css/error.ctp" is missing.
+#0 /home/pickmeals/public_html/live/lib/Cake/View/View.php(514): View->_getLayoutFileName('error')
+#1 /home/pickmeals/public_html/live/lib/Cake/View/View.php(481): View->renderLayout('', 'error')
+#2 /home/pickmeals/public_html/live/lib/Cake/Controller/Controller.php(960): View->render('/Errors/error40...', NULL)
+#3 /home/pickmeals/public_html/live/app/Lib/Error/AppExceptionRenderer.php(25): Controller->render('/Errors/error40...')
+#4 /home/pickmeals/public_html/live/app/Lib/Error/AppExceptionRenderer.php(81): AppExceptionRenderer->notFound(Object(MissingControllerException))
+#5 [internal function]: AppExceptionRenderer->missingController(Object(MissingControllerException))
+#6 /home/pickmeals/public_html/live/lib/Cake/Error/ExceptionRenderer.php(187): call_user_func_array(Array, Array)
+#7 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(127): ExceptionRenderer->render()
+#8 [internal function]: ErrorHandler::handleException(Object(MissingControllerException))
+#9 {main} in [/home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php, line 138]
+2015-04-03 06:05:00 Error: Fatal Error (1): Uncaught exception 'InternalErrorException' with message 'Internal Server Error' in /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php:266
+Stack trace:
+#0 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(256, '[MissingLayoutE...', '/home/pickmeals...', 138)
+#1 [internal function]: ErrorHandler::handleError(256, '[MissingLayoutE...', '/home/pickmeals...', 138, Array)
+#2 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(138): trigger_error('[MissingLayoutE...', 256)
+#3 [internal function]: ErrorHandler::handleException(Object(MissingControllerException))
+#4 {main}
+  thrown in [/home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php, line 266]
+2015-04-03 06:05:00 Error: [InternalErrorException] Internal Server Error
+Request URL: /live/fonts/circular.css
+Stack Trace:
+#0 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Uncaught except...', '/home/pickmeals...', 266)
+#1 [internal function]: ErrorHandler::handleError(1, 'Uncaught except...', '/home/pickmeals...', 266, Array)
+#2 /home/pickmeals/public_html/live/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Uncaught except...', '/home/pickmeals...', 266, Array)
+#3 /home/pickmeals/public_html/live/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-04-03 06:20:21 Error: [MissingControllerException] Controller class FontsController could not be found.
+Exception Attributes: array (
+  'class' => 'FontsController',
+  'plugin' => NULL,
+)
+Request URL: /live/fonts/circular.css
+Stack Trace:
+#0 /home/pickmeals/public_html/live/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-04-03 06:20:21 Error: Fatal Error (256): [MissingLayoutException] Layout file "Layouts/css/error.ctp" is missing.
+#0 /home/pickmeals/public_html/live/lib/Cake/View/View.php(514): View->_getLayoutFileName('error')
+#1 /home/pickmeals/public_html/live/lib/Cake/View/View.php(481): View->renderLayout('', 'error')
+#2 /home/pickmeals/public_html/live/lib/Cake/Controller/Controller.php(960): View->render('/Errors/error40...', NULL)
+#3 /home/pickmeals/public_html/live/app/Lib/Error/AppExceptionRenderer.php(25): Controller->render('/Errors/error40...')
+#4 /home/pickmeals/public_html/live/app/Lib/Error/AppExceptionRenderer.php(81): AppExceptionRenderer->notFound(Object(MissingControllerException))
+#5 [internal function]: AppExceptionRenderer->missingController(Object(MissingControllerException))
+#6 /home/pickmeals/public_html/live/lib/Cake/Error/ExceptionRenderer.php(187): call_user_func_array(Array, Array)
+#7 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(127): ExceptionRenderer->render()
+#8 [internal function]: ErrorHandler::handleException(Object(MissingControllerException))
+#9 {main} in [/home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php, line 138]
+2015-04-03 06:20:21 Error: Fatal Error (1): Uncaught exception 'InternalErrorException' with message 'Internal Server Error' in /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php:266
+Stack trace:
+#0 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(256, '[MissingLayoutE...', '/home/pickmeals...', 138)
+#1 [internal function]: ErrorHandler::handleError(256, '[MissingLayoutE...', '/home/pickmeals...', 138, Array)
+#2 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(138): trigger_error('[MissingLayoutE...', 256)
+#3 [internal function]: ErrorHandler::handleException(Object(MissingControllerException))
+#4 {main}
+  thrown in [/home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php, line 266]
+2015-04-03 06:20:21 Error: [InternalErrorException] Internal Server Error
+Request URL: /live/fonts/circular.css
+Stack Trace:
+#0 /home/pickmeals/public_html/live/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Uncaught except...', '/home/pickmeals...', 266)
+#1 [internal function]: ErrorHandler::handleError(1, 'Uncaught except...', '/home/pickmeals...', 266, Array)
+#2 /home/pickmeals/public_html/live/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Uncaught except...', '/home/pickmeals...', 266, Array)
+#3 /home/pickmeals/public_html/live/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
