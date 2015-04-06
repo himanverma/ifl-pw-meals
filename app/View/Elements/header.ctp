@@ -12,12 +12,12 @@
                                 <img class="logo-2" src="/img/pickmeals_icon.png" onclick="window.location = '/'" >
                             </div>
                         </div>
-                        <div class="col-sm-8 col-md-6">
+                        <div class="col-sm-6 col-md-6">
                             <div style="margin: 0 auto;">
                                 <h3 class="call-number">Orders accepted till 4 am Call 8054636023</h3>
                             </div>
                         </div>
-                        <div class="col-sm-1 col-md-3">
+                        <div class="col-sm-3 col-md-3">
                             <div class="top-txt">
                                 <?php if ($c_user) { ?>
                                     <a class="trans-btns" href="/myaccount">My Account</a>

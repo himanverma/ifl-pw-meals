@@ -187,7 +187,7 @@
     .chef_profile_about h1 {font-size: 17px;}
     .footer_top_box iframe{width: 225px;}
 
-
+    .trans-btns {margin-left: 6px !important; padding: 7px 5px !important;}
 }
 
 
@@ -200,7 +200,7 @@
 @media screen and (max-width: 1000px){
     
     .top-txt {padding: 27px 0 !important;}
-    .call-number {padding: 18px 0 0 !important; font-size: 15pt;}
+    .call-number {padding: 18px 0 0 !important; font-size: 12pt;}
 
     .home-video {
         display: none;
@@ -715,7 +715,7 @@
     .navbar-brand{display: none;}
   
     padding-none{padding: 0;}
-    .trans-btns {margin-left: 6px !important; padding: 9px 16px !important;}
+    .trans-btns {margin-left: 6px !important; padding: 7px 8px !important;}
     .trans-btns {font-size: 12px;}
     .food_qty_button button{padding: 9px 18px;}
     .navbar-toggle{padding: 7px 8px;}

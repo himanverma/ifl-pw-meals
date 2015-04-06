@@ -9,25 +9,29 @@
                     <img onerror="this.src = '/img/chef_profile.jpg'" data-bind="attr: {'src':image} ">
                     <div class="btn btn-primary upload_pic_btn">
                         Select Picture
-                    <input class="il-edit f-inp" name="data[Customer][image]" type="file" data-bind="event: { 'blur': stopEditing , 'change': imageUpdate }" /> 
+                    <input class="il-edit f-inp" name="data[Customer][image]" type="file" data-bind="event: { 'blur': 
+stopEditing , 'change': imageUpdate }" /> 
                     </div>
 
                 </div>
                 <div class="user_profile_about">
-                    <h1>
+
+                    <ul class="user-profile-text">
+                                            <h1>
                         <div class="editor editor2"> 
                             <div class="il-view" data-bind="click: editItem , text: name() || 'Edit Full Name...'"> 
                             </div>
-                            <input class="il-edit" type="text" name="data[Customer][name]" data-bind="value: name, event: { 'blur': stopEditing }" /> 
+                            <input class="il-edit" type="text" name="data[Customer][name]" data-bind="value: name, event: { 
+'blur': stopEditing }" /> 
                         </div>
                     </h1>
-                    <ul>
                         <li>
                             <span class="user_profile_phone"><img src="/img/home.png"></span>
                             <div class="editor editor2"> 
                                 <div class="il-view" data-bind="click: editItem , text: address() || 'Edit Address...'"> 
                                 </div>
-                                <input class="il-edit" type="text" name="data[Customer][address]" data-bind="value: address, event: { 'blur': stopEditing }" /> 
+                                <input class="il-edit" type="text" name="data[Customer][address]" data-bind="value: 
+address, event: { 'blur': stopEditing }" /> 
                             </div> 
                         </li>
                         <?php if ($me['mobile_number'] != ""): ?>  
@@ -35,7 +39,8 @@
                                 <div class="editor"> 
                                     <div class="il-view" data-bind=" text: mobile_number() || 'Add mobile number...'"> 
                                     </div>
-                                    <input class="il-edit" type="text" name="data[Customer][mobile_number]" data-bind="value: mobile_number, event: { 'blur': stopEditing }" /> 
+                                    <input class="il-edit" type="text" name="data[Customer][mobile_number]" data-
+bind="value: mobile_number, event: { 'blur': stopEditing }" /> 
                                 </div> 
                             </li>
                         <?php endif; ?>
@@ -43,25 +48,96 @@
                             <div class="editor"> 
                                 <div class="il-view" data-bind=" text: email() || 'Add Email Address...'"> 
                                 </div>
-                                <input class="il-edit" type="text" name="data[Customer][email]" data-bind="value: email, event: { 'blur': stopEditing }" /> 
+                                <input class="il-edit" type="text" name="data[Customer][email]" data-bind="value: email, 
+event: { 'blur': stopEditing }" /> 
                             </div> 
                         </li>-->
-                        <li>
-                            <a href="/change-password">Change Password</a>
-                        </li>
+                        
                         <input type="hidden" name="data[Customer][id]" value="" data-bind="value:uid " />
 <!--                        <input type="hidden" name="data[Customer][fbid]" value="" data-bind="value:fbid " />-->
 <!--                        <li><span class="user_profile_phone">Verified:</span>
                             <p> <?php echo $me['verified']; ?></p>
                         </li>-->
+                        <li data-toggle="modal" data-target="#myModal"><span class="wallet-img"><img src="/img/wallet.png"></span><p>Wallet</p></li>
+                        <li data-toggle="modal" data-target="#myModal1"><span class="promo-code-img"><img src="/img/promocode.png"></span><p>Promo Code (For Free Meal)</p></li>
+                        <li data-toggle="modal" data-target="#myModal2"><span class="share-img"><img src="/img/share.png"></span><p>Share & Get Free Meal</p></li>
+                        <li><span class="password-change-img"><img src="/img/password-change.png"></span><a href="/change-password">Change Password</a></li>
+                       
 
                     </ul>
+                    <!--<ul>
+                        <li>
+                            <a href="/change-password">Change Password</a>
+                        </li>
+                    </ul>-->
 
                 </div>
             </form>
 
             <div id="" data-bind="visible:isUpdating ">Updating...</div>
         </div>
+        
+        
+        <!--04-04-2015-->
+        <!-- Modal -->
+<div class="modal fade user-profile-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Wallet</h4>
+      </div>
+      <div class="modal-body">
+        <h5>Your total balance is: <b>Rs 0</b></h5>
+      </div>
+    </div>
+  </div>
+</div>
+    
+        
+                <!-- Modal -->
+<div class="modal fade user-profile-modal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Promo Code</h4>
+      </div>
+      <div class="modal-body">
+          <div class="promo_modal"><label><input type="text" placeholder="Promo code"></label></div>
+      </div>
+      
+      <div class="promo-center-block">
+      <div class="modal-footer center-block">
+        <button type="button" class="">Apply</button>
+      </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+        
+                        <!-- Modal -->
+<div class="modal fade user-profile-modal" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Share Pickmeals</h4>
+      </div>
+      <div class="modal-body">
+          <h4 style="font-size: 15px; margin: 0;">Share your Promo Code with your friends, and they get Rs 40 first meal free. Once they order, you get Rs 25 in Pickmeals credits.</h4>
+      </div>
+      <div class="promo-center-block">
+      <div class="modal-footer center-block">
+        <button type="button" class="">Share</button>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+        
     </div>
     <div class="col-sm-9">
         <div class="user_list_inn">
@@ -76,11 +152,13 @@
 </div>
 
 <div style="padding-bottom: 24px;" class="bs-example">
-    <div aria-hidden="true" aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1" id="image-crop-mdl" class="modal fade" style="display: none;">
+    <div aria-hidden="true" aria-labelledby="exampleModalLabel" role="dialog" tabindex="-1" id="image-crop-mdl" 
+class="modal fade" style="display: none;">
         <div class="modal-dialog upload_pic_dialog" style="margin:5% auto;">
             <div class="modal-content">
                 <!--<div class="modal-header">
-                  <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span 
+class="sr-only">Close</span></button>
       
                 </div>-->
                 <div class="modal-body">
@@ -94,8 +172,10 @@
                 </div>
                 <div class="modal-footer upload_pic_crop">
                     <div class="pull-right" id="crp-ftr">
-                        <button type="button" onclick="javascript: $('#image-crop-mdl').modal('hide');" class="btn btn-default">Cancel</button>
-                        <button type="button" onclick="javascript: CustomerObj.cropNow();" class="btn btn-success crop_pic_save">Save</button>
+                        <button type="button" onclick="javascript: $('#image-crop-mdl').modal('hide');" class="btn btn-
+default">Cancel</button>
+                        <button type="button" onclick="javascript: CustomerObj.cropNow();" class="btn btn-success 
+crop_pic_save">Save</button>
                     </div>
                 </div>
             </div>
@@ -311,11 +391,8 @@ $this->end();
     .il-editing .il-view {
         display: none;
     }
-    .editor .il-view{
-        height: 30px
-    }
     .editor2 .il-view:hover{
-        background: url('/img/edit_pen.png') right no-repeat rgba(160,160,160,0.2);
+        background: url('/img/edit_pen.png') right no-repeat;
         background-size: 18px 18px;
         cursor: pointer;
     }
