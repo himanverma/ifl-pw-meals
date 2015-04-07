@@ -1,9 +1,9 @@
 <div class="combinations index">
 	<h2><?php echo __('Combinations'); ?></h2>
         <div class="well">
-            <form method="post">
+            <form method="post" action="<?php echo $this->Html->url('/Combinations/today'); ?>">
                 <div class="form-group">
-                    <input type="text" name="data[keyword]" class="form-control" placeholder="keyword..." />
+                    <input type="text" name="data[keyword]" class="form-control" value="<?php echo $this->request->data('keyword'); ?>" placeholder="keyword..." />
                 </div>
                 <div class="form-group">
                     <select name="data[field]" class="form-control">
@@ -14,6 +14,8 @@
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Search</button>
+                <button type="button" onclick="javascript: window.location = '/Combinations/today'" class="btn btn-primary">Reset</button>
+                
             </form>
         </div>
         <div class="well">

@@ -181,6 +181,7 @@ class CombinationsController extends AppController {
         $like = $this->request->data['Combination']['search'];
         $searchRecords = $this->Combination->find('all', array('conditions' => array(
                 "AND" => array(
+                    "Combination.stock_count > " => 0,
                     "Combination.type" => "MAIN",
                     "Combination.visible" => 1,
                     "Combination.display_name LIKE" => "%$like%",
@@ -209,7 +210,7 @@ class CombinationsController extends AppController {
     public function today() {
         $this->Combination->recursive = 0;
         $this->Paginator->settings['limit'] = 20;
-        $this->Paginator->settings['order'] = "Combination.id DESC";
+        $this->Paginator->settings['order'] = "Combination.visible DESC";
         if($this->request->is(array('post'))){
             $dt = $this->Paginator->paginate(
                     "Combination", array(
