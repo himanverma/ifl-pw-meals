@@ -1,5 +1,5 @@
 <!--******************************************banner********************************************-->
-<?php if($this->Session->read("App.layout") != "ios"){}else ?>
+<?php if($this->Session->read("App.layout") == "ios"){}else { ?>
 <div class="home-video" style="height: 565px;">
     <video id="pretzel-video" class="video-playing" poster="/story/1.jpg" autoplay="true" style="width: 100%; ">
         <source type="video/mp4" src="/story/NA.mp4"></source>

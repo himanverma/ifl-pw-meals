@@ -26,7 +26,8 @@ class DevicesController extends AppController {
         public function iosApp(){
             $this->autoRender = false;
             $this->Session->write("App.layout", "ios");
-            $this->redirect("https://www.pickmeals.com");
+            $this->response->type('html');
+            $this->response->body('<script>window.location = "/";</script>');
         }
         
         
