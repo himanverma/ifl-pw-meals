@@ -23,7 +23,7 @@ class WebappController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->layout = "webapp";
+        $this->layout = $this->appLayout . "";
         $this->Auth->allow(array('home', 'login', 'fblogin', 'chef', 'checkout','reviews', 'getuser', 'checklogin', "aboutus", "contactus", "faq", "press", "privacy", "terms", "forgot_password", "change_password", "change_password", 't'));
         
         $this->loadModel('Category');
@@ -40,10 +40,10 @@ class WebappController extends AppController {
     }
 
     public function home() {
-        $this->layout = "webapp";
+        $this->layout = $this->appLayout . "";
     }
     public function dev() {
-        $this->layout = "webapp-dev";
+        $this->layout = $this->appLayout . "-dev";
     }
 
     public function checklogin() {
@@ -75,7 +75,7 @@ class WebappController extends AppController {
     public function login() {
         $this->loadModel('Customer');
 
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
         if ($this->request->is(array('ajax', 'post'))) {
             $this->autoRender = false;
 
@@ -208,7 +208,7 @@ class WebappController extends AppController {
     }
 
     public function checkout() {
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
         $this->loadModel('Customer');
         $x = $this->Customer->find("first",array(
             'conditions' => array(
@@ -220,7 +220,7 @@ class WebappController extends AppController {
     }
 
     public function chef($slug = null) {
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
         if ($slug == null) {
             throw new NotFoundException("Page Not Found...");
         }
@@ -260,7 +260,7 @@ class WebappController extends AppController {
     }
 
     public function reviews($key = null) {
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
         $this->loadModel("Combination");
         $this->loadModel("Review");
         $x = $this->Combination->find("first", array(
@@ -288,7 +288,7 @@ class WebappController extends AppController {
         ini_set("max_execution_time", -1);
 //        Configure::write('debug', 2);
         $this->loadModel('Customer');
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
         $me = $this->Customer->find("first", array("conditions" => array('Customer.id' => AuthComponent::user('id'))));
         $this->set("me", $me['Customer']);
 
@@ -408,12 +408,12 @@ class WebappController extends AppController {
     }
 
     public function aboutus() {
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
     }
 
     public function contactus() {
       Configure::write('debug', 2);
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
         if($this->request->is('post')){        
         App::uses("CakeEmail", "Network/Email");
         $fm = new CakeEmail('smtp');
@@ -441,31 +441,31 @@ class WebappController extends AppController {
         
     }
     public function feedback() {
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
     }
 
     public function faq() {
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
     }
 
     public function press() {
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
     }
 
     public function privacy() {
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
     }
 
     public function terms() {
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
     }
 
     public function payments() {
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
     }
 
     public function forgot_password() {
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
         if ($this->request->is(array('post'))) {
             $this->loadModel('Customer');
             $cst = $this->Customer->find("all", array(
@@ -492,7 +492,7 @@ class WebappController extends AppController {
     }
 
     public function change_password() {
-        $this->layout = "webapp_inner";
+        $this->layout = $this->appLayout . "_inner";
         if($this->request->is(array('post'))){
             $this->loadModel('Customer');
             $user = $this->Customer->find("first", array(

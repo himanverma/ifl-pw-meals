@@ -16,6 +16,20 @@ class DevicesController extends AppController {
  */
 	public $components = array('Paginator', 'Session');
         
+        public function beforeFilter() {
+            parent::beforeFilter();
+            $this->Auth->allow(array('iosApp'));
+        }
+
+        
+
+        public function iosApp(){
+            $this->autoRender = false;
+            $this->Session->write("App.layout", "ios");
+            $this->redirect("https://www.pickmeals.com");
+        }
+        
+        
         
         
         private function sendGoogleCloudMessage($data = array('title' => '', 'message' => ''), $diviceid = null) {

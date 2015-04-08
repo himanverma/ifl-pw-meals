@@ -35,7 +35,9 @@ class AppController extends Controller {
     public $components = array('RequestHandler', 'Auth', 'Session','MobileDetect.MobileDetect');
     public $helpers = array('Html', 'Form', 'Combinator.Combinator','Utilitymethods');
     public $_device = "desktop";
-    
+    public $appLayout = "webapp";
+
+
     public function _setGlobalConfig(){
         $this->loadModel("Globalsetting");
         $g = $this->Globalsetting->find("all");
@@ -53,8 +55,13 @@ class AppController extends Controller {
 
 
     public function beforeFilter() {
-        
         parent::beforeFilter();
+        
+        if($this->Session->check('App.layout')){
+            $this->appLayout = $this->Session->read('App.layout');
+        }
+        
+        
         if ($this->request->is('mobile')) {
             if($this->MobileDetect->detect('isTablet')){
                 $this->_device = 'tablet';
