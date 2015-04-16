@@ -50,7 +50,18 @@ class RecipesController extends AppController {
      */
     public function index() {
         $this->Recipe->recursive = 0;
-        $this->set('recipes', $this->Paginator->paginate());
+        $this->Paginator->settings['limit'] = 20;
+        $this->Paginator->settings['order'] = "Recipe.id ASC";
+        if($this->request->is(array('post'))){
+            $dt = $this->Paginator->paginate(
+                    "Recipe", array(
+                        "" . $this->request->data['field'] . " LIKE" => "%".$this->request->data['keyword']."%"
+                    )
+            );
+        }else{
+            $dt = $this->Paginator->paginate("Recipe");
+        }
+        $this->set('recipes', $dt);
     }
 
     /**

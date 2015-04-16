@@ -1,6 +1,22 @@
 <div class="recipes index">
 	<h2><?php echo __('Recipes'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
+        <div class="well">
+            <form method="post" action="<?php echo $this->Html->url('/Recipes'); ?>">
+                <div class="form-group">
+                    <input type="text" name="data[keyword]" class="form-control" value="<?php echo $this->request->data('keyword'); ?>" placeholder="keyword..." />
+                </div>
+                <div class="form-group">
+                    <select name="data[field]" class="form-control">
+                        <option value="Recipe.recipe_name">Recipe Name</option>
+                        <option value="Recipe.description">Description</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+                <button type="button" onclick="javascript: window.location = '/Recipes'" class="btn btn-primary">Reset</button>
+                
+            </form>
+        </div>
+	<table cellpadding="0" cellspacing="0" class="table-bordered table-responsive table-striped table table-mailbox table-hover">
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>

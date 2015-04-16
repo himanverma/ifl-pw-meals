@@ -1,6 +1,7 @@
 <?php //print_r($devices); exit; ?>
 
 <section class="content" id="ibx-r6">
+    <form method="post">
     <div class="row">
         <section class="col-lg-6 connectedSortable">
             <!-- Map box -->
@@ -20,13 +21,17 @@
                 <div class="box-body no-padding">
                     <div>
                         <div class="form-group">
-                            <textarea class="form-control"></textarea>
+                            <textarea class="form-control" name="message"></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="button">Send</button>
+                            <button type="submit">Send</button>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                <b>Sent:</b> <?php echo $result['sent']; ?><br>
+                <b>Failed:</b> <?php echo $result['failed']; ?>
             </div>
         </section>
 
@@ -51,7 +56,7 @@
                         <thead>
                             <tr>
                                 <th>
-                                    <input class="simple" type="checkbox" />
+                                    <input class="" id="allChk" type="checkbox" />
                                 </th>
                                 <td></td>
                                 <th>
@@ -65,7 +70,7 @@
                             <?php foreach($devices as $dv){ ?>
                             <tr>
                                 <td style="vertical-align: middle;">
-                                    <input class="simple" type="checkbox" data-bind="value: jsonval , checked:$root.selectedCombinations " value="" />
+                                    <input class="deleteSel" type="checkbox" data-bind="value: jsonval , checked:$root.selectedCombinations " name="tokens[]" value="<?php echo $dv['Device']['device_token']; ?>" />
                                 </td>
                                 <td>
                                     <img data-bind="attr:{'src':Combination.image} " width="70px" />
@@ -76,7 +81,7 @@
                                     <p>Mobile Number. <?php echo $dv['Customer']['mobile_number']; ?></p>
                                 </td>
                                 <td>
-                                    <?php echo $dv['Customer']['registered_on']; ?>
+                                    <?php echo date("d-m-Y h:i a",$dv['Customer']['registered_on']); ?>
                                 </td>
                             </tr>
                             <?php } ?>
@@ -86,6 +91,7 @@
             </div>
         </section>
     </div>
+    </form>
 </section>
 <script type="text/javascript">
     var NotifyVM = function(){
@@ -94,5 +100,20 @@
             
         };
     };
-    
+    $(document).ready(function(e){
+        
+        $('#allChk').on("ifChanged",function(){
+           if($(this).is(":checked")){
+               $('.deleteSel').prop('checked',true);
+           }else{
+               $('.deleteSel').prop('checked',false);
+           }
+           $(".deleteSel").iCheck({
+                checkboxClass: 'icheckbox_minimal',
+                radioClass: 'iradio_minimal'
+            });
+        });
+
+        
+    });
 </script>

@@ -42,7 +42,7 @@
  .food_qty_button > img {width: 100% !important;}
 .food_qty_button button { width: 100% !important; margin: 0px !important;}
 
-.call-number {padding: 14px 0 0; font-size: 22pt;}
+.call-number {padding: 24px 0 0; font-size: 20pt;}
 
 }
 
@@ -163,7 +163,9 @@
         padding: 0 0 0 26px;
     }
     
-    .call-number {padding: 18px 0 0 !important; font-size: 17pt;}
+    .call-number {padding: 24px 0 0 !important; font-size: 16pt;}
+    
+    .trans-btns {margin-left: 6px !important; padding: 7px 5px !important;}
 
 
     /*--25-1-2015--*/
@@ -200,7 +202,7 @@
 @media screen and (max-width: 1000px){
     
     .top-txt {padding: 27px 0 !important;}
-    .call-number {padding: 18px 0 0 !important; font-size: 15pt;}
+    .call-number {padding: 30px 0 0 !important; font-size: 12pt;}
 
     .home-video {
         display: none;
@@ -697,6 +699,8 @@
     .home_content {margin: 31px 0 0;}
     .top-txt {float: right; padding: 20px 0 !important;}
     .navbar-nav img{width: 100%;float: left; padding: 5%;}
+    
+    .call-number {padding: 18px 0 0 !important; font-size: 12pt;}
 
     .navbar-nav > li > a {clear: both;width: 100%;}
     .list_box_main{margin: 0;}
@@ -715,7 +719,7 @@
     .navbar-brand{display: none;}
   
     padding-none{padding: 0;}
-    .trans-btns {margin-left: 6px !important; padding: 9px 16px !important;}
+    .trans-btns {margin-left: 6px !important; padding: 7px 8px !important;}
     .trans-btns {font-size: 12px;}
     .food_qty_button button{padding: 9px 18px;}
     .navbar-toggle{padding: 7px 8px;}

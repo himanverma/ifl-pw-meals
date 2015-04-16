@@ -124,14 +124,29 @@ class AppController extends Controller {
                 'delete',
                 'view',
                 'edit',
+                'listmessage',
+                'notify',
+                'neworder',
+                'getxorder'
             );
             $controllers = array(
                 'vendors',
                 'customers',
-                'recipies',
+                'recipes',
                 'dishfilters',
                 'combinations',
                 'addresses',
+                'orders',
+                'globalsettings',
+                'devices',
+                'deliveryboys',
+                'splashs',
+                'dashboard',
+                'appversions',
+                'categories',
+                'sendnotifications', // Dump
+                'Errorlogs', // Dump
+                'tests'
 //                'devices'
             );
             if (in_array(strtolower($r['controller']), $controllers) && in_array(strtolower($r['action']), $actions) && !isset($r['ext'])) {

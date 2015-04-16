@@ -34,7 +34,7 @@ class DevicesController extends AppController {
         
         
         private function sendGoogleCloudMessage($data = array('title' => '', 'message' => ''), $diviceid = null) {
-            $apiKey = "AIzaSyCdLDDJ1iT1L1x1txV8eVtY_BPWFcJ3lSc";
+            $apiKey = "AIzaSyDzcFtxovH5yWv56PG04gVIYAQA9Xfz8DU";
             $registrationIDs[] = $diviceid;
             $message = $data;
             $url = 'https://android.googleapis.com/gcm/send';
@@ -60,18 +60,30 @@ class DevicesController extends AppController {
         
         
         public function notify(){
-            $x = $this->sendGoogleCloudMessage(array(
-                'title' => "Pickmeals.com",
-                'message' => 'Got it...'
-            ), 'APA91bFQm2KmABW1CZPENY1K5FMl0GhRXroh6IQ8dTvsHIRe0oCpK1nksIYNUWm1JKz0gv_eDAny7XtWb3hbVl2DeYQIvqYgy-Fg6R4xBTtAu6tsdpN6kAGjWsY8ihfYM-W9AlwFXw7u');
-            $this->set("result", $x);
+            $result = [
+                "sent" => 0,
+                "failed" => 0
+            ];
             //$devices = $this->Device
             $d = $this->Device->find('all');
             $this->set('devices',$d);
-            if($this->request->is(array('post'))){
+            if($this->request->is(array('post','put'))){
                 $d = $this->request->data;
+                foreach($d['tokens'] as $tkn){
+                    $x = $this->sendGoogleCloudMessage(array(
+                        'title' => "Pickmeals.com",
+                        'message' => $d['message'],
+                    ), $tkn);
+                    $x = json_decode($x, true);
+                    if($x['success'] == 1){
+                        $result['sent']++;
+                    }else{
+                        $result['failed']++;
+                    }
+               }
                 
             }
+            $this->set("result", $result);
         }
 
 
